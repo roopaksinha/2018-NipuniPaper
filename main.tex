@@ -1,0 +1,65 @@
+% This is based on the LLNCS.DEM the demonstration file of
+% the LaTeX macro package from Springer-Verlag
+% for Lecture Notes in Computer Science,
+% version 2.4 for LaTeX2e as of 16. April 2010
+%
+% See http://www.springer.com/computer/lncs/lncs+authors?SGWID=0-40209-0-0-0
+% for the full guidelines.
+%
+\documentclass{llncs}
+
+
+\input{includedpackages}
+
+\begin{document}
+
+
+
+\title{Automatic Conversion of Activity Diagrams into Flexible Smart-home Apps}
+%
+\titlerunning{Automatic Conversion of Activity Diagrams into Flexible Smart-home Apps}  % abbreviated title (for running head)
+%                                     also used for the TOC unless
+%                                     \toctitle is used
+%
+\author{Nipuni Perera\inst{1} \and Roopak Sinha\inst{1}
+}%
+\authorrunning{Perera and Sinha} % abbreviated author list (for running head)
+%
+%%%% list of authors for the TOC (use if author list has to be modified)
+\tocauthor{Nipuni Perera and Roopak Sinha}
+%
+\institute{IT \& Software Engineering, Auckland University of Technology, New Zealand\\
+\email{nipuni.perera@aut.ac.nz},
+\email{roopak.sinha@aut.ac.nz}}
+
+\maketitle              % typeset the title of the contribution
+
+\begin{abstract}
+Our homes are getting smarter, thanks to the larger variety of sensor and actuator devices that can be integrated to provide complex services.
+However, a key technical challenge is writing complex smart-home applications that can automatically operate in different smart-homes and use any available devices dynamically. This issue becomes amplified when domain-experts, such as doctors, who are not proficient in software development, are tasked with designing these applications. 
+
+In this paper, we identify UML Activity Diagrams as the most appropriate visual design model that can be used intuitively by domain-experts to design smart-home applications. Then, through comprehensive architecture design, we propose a complete \textit{automatic translation tool}, which provides a fully-featured UML Activity Diagram editor and the first compiler (to the best of our knowledge) to convert Activity Diagram designs into highly flexible code that can run in any smart-home system. 
+Our evaluation of the automatic translation tool shows that it provides many necessary improvements in usability, bringing us a step closer to deploying apps designed by domain-experts into our smart-homes.
+
+
+
+
+\keywords{smart-home, dynamic configurations, visual plans, automatic code generation}
+\end{abstract}
+%
+
+\input{intro}
+\input{relatedworks}
+\input{architecture}
+\input{development}
+\input{evaluation}
+\input{conclusion}
+
+
+
+\bibliographystyle{splncs03}
+\bibliography{references}
+
+
+
+\end{document}

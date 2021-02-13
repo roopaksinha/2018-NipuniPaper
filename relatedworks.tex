@@ -1,0 +1,38 @@
+\section{Related Works}
+\label{sec:relatedworks}
+
+We conducted a systematic literature review to identify existing solutions for modelling smart-home software and candidate app design models for domain expert driven design of such apps. We also compare the surveyed works on key quality attributes like usability, interoperability, and customisability.
+The details of this process are documented in~\cite{perera2018thesis}. This section presents the key findings from this comprehensive review.
+
+\subsection{Current solutions for modelling smart-home applications}
+%The existing solutions that answer the problem definition are categorized in to commercial and research based solutions. Each solution is addressed briefly below thus emphasizing their research gap. 
+
+We identify two distinct classes of solutions - \textit{commercial} and \textit{research}. Commercial solutions are mature technologies that are available in the market today, while research solutions provide early proof-of-concept implementations only.
+
+\noindent\textbf{Commercial solutions:} 
+Solutions such as the Eclipse Smart Home (ESH) support both modelling and automatic code generation. 
+The ESH framework, supported by the IoT platform~\cite{Smirek} provides modules for abstraction and translation functions thus enabling use cases and interaction across protocol boundaries. Even though this integrated system offers open personalized user interfaces based on a resource server, this may yet result in misuse and injection of malware, thus causing security and privacy issues \cite{Smirek}. 
+AppleHealth offers an interactive solution to centralize mobile health applications and the management of health information. However, users need to have prior knowledge of web environments and gain familiarity with the provided web applications in order to take advantage of the services offered by these technologies~\cite{Vega-Barbas}. 
+The SmartThings hub connects to motion sensors within a home and tracks anomalous activity. 
+However, this framework has safety concerns, and can be misused by hackers for gaining access to a house~\cite{zillner2015white}. These solutions, as well as others like MisterHouse and Calos, provide very domain-specific capabilities that work only with compatible and mostly proprietary devices and software platforms.
+
+ 
+\noindent\textbf{Research solutions}: 
+The Simple Internet of Things (SITE)~\cite{Hafidh} initiative allows the users to specify and gain control of Internet of Things (IoT) smart objects. This solution supports modelling by end-users through a user interface or language for adding rules to control smart objects. However, this solution does not provide the ability to design more complex smart-home applications.
+Parametric Statecharts and an associated compiler~\cite{sinha2017parametric} allow the visual modelling smart-home apps that may be deployed to smart-homes with different device configurations. These variances in configurations are captured as parameters in parametric Statechart designs, which are used to configure the application code at compile time. However, Statecharts are not easy to use for end users. Also, the inclusion of variables may simplify a design but this may cause difficulties during analysis\cite{stephan2013survey}.
+Rule-based intelligence for domotic environments~\cite{Bonino}, targeted towards homes and hospitals, addresses two main challenges of lack of interoperability and insufficient support for advanced user-home interaction. Here, an Intelligent Domotic Environment (allows the integration of different automation systems, appliances, and devices into a single powerful environment, which is capable of providing Ambient Intelligence functionalities. However, this solution is unable to handle dynamicity and uncertainty in devices operating in smart environments. 
+
+Tab~\ref{tab:compare} shows a comparison of the surveyed research and commercial solutions on key qualities of usability, interoperability and customizability. Usability is the degree to which the smart home user understands, uses, and adopts a solution~\cite{demiris2008findings}. Interoperability is the ability of a system to function with other systems without the need for need for special effort \cite{miller2000interoperability}. Customizability is the ability to customize an application based on user preferences \cite{groppe2005profile}.
+Most solutions do not meet all these criteria. Often, the more usable solutions are proprietary and hence tightly coupled with the use of a small set of devices. 
+
+%\subsection{Comparison of existing works}
+
+\input{comparison_table}
+
+\subsection{Selection of a suitable App design model}
+
+As Tab.~\ref{tab:compare} shows, existing solutions fail to meet at least some of the desired qualities. This led us to analyse visual design models that are well-known or standardised, easy to use for non-experts, amenable to code generation, able to model smart home apps that integrate many sensor and actuator devices, etc. Tab.~\ref{tab:diagrams} shows the overall comparison of UML diagrams on these factors. UML was chosen as it is a standard design framework which also has a high availability of tools supporting its various diagrams. UML Activity diagrams featured the maximum number of desired qualities. Hence, this research then focussed on both customising UML Activity Diagrams for designing smart-home apps and to enable automatic code generation from such designs. Being a behavioural diagram type, no current compiler supports automatic code generation from UML Activity Diagrams.
+
+
+
+\input{diagrams_comparison}

@@ -1,0 +1,63 @@
+%
+% LaTeX COMMANDS
+% ~~~~~~~~~~~~~~
+% A library of useful LaTeX command definitions and their documentation.
+%
+% This library can be included by specifying the input file name in an
+% input command in the main LaTeX document like this:
+%
+%    \documentclass[conference]{IEEEtran}
+%    \input{commands}
+%    ...
+% 
+% Roopak Sinha and Barry Dowdeswell - AUT University
+%
+% Revision History
+% ~~~~~~~~~~~~~~~~
+% 27.01.2016 BRD Original version.
+% 08.02.2016 BRD Incorporates Roopak's revisions, including Theorem
+%                definitions and a tidy-up of the formatting.
+% 21.05.2016 BRD Added the \here command.
+%
+%
+% \here
+% ~~~~~
+% Inserts a line to show where the end of the current work is and 
+% where uncompleted work begins.
+%
+\newcommand{\here}{	
+	\color{blue}
+	\noindent
+	\textbf{<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<=========>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>}
+	\color{black}
+}   
+
+%
+% Insert a comment from Roopak
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Inserts a comment in blue prefixed by RS -
+%
+%  \rs{this is a comment from Roopak}
+
+\newcommand{\rs}[1]{          
+	\color{blue}
+	\noindent
+	RS - 
+	\textit{{#1}}
+	\color{black}
+}                              
+
+% Insert a comment from Barry
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Inserts a comment in red prefixed by BRD -
+%
+%  \brd{this is a comment from Barry}
+%
+\newcommand{\brd}[1]{         
+	\color{red}
+	\noindent
+	BRD - 
+	\textit{{#1}}
+	\color{black}
+}
+

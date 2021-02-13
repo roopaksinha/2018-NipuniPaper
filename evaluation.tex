@@ -1,0 +1,39 @@
+\section{Evaluation and Discussion}
+ 
+
+
+This study does not involve the participation of external users, therefore we evaluate the Automatic Translation Tool through four representative smart home apps: Smart Lighting System, Smart Security System. Smart Lock System and Smart Weighting System.
+The evaluation criteria for the Automatic Translation Tool are defined based on the quality attribute requirements and primary functional requirements (Sec.~\ref{Architecture Design}). 
+To evaluate usability, we count the size of each model, the time taken for creating the model, and the ease at which models can be updated. For other factors, like performance, we look at the size of the generated code and time for compilation. The experimental results for the four case studies are shown in Tab.~\ref{t4}.
+
+
+
+
+
+\begin{table}[h!]
+\scriptsize
+\begin{center}
+\begin{tabular}{|p{1.7cm}|c|c|c|c|c|p{1.5cm}|c|p{1.5cm}|} \hline
+    \textbf{Case Study} & \multicolumn{4}{|c|}{\textbf{Number of Nodes}}&\textbf{Transitions} & \textbf{Modeling Time} & \textbf{Code Size}& \textbf{Compile Time} \\ \hline
+    & Activity& Decision& Initial& Final& & & &\\ \hline
+    Light System& 7& 3& 3& 1& 14& 12 mins 10 sec &29 lines& 1 min 30 sec\\ \hline
+    Security System& 6& 1& 1& 2& 9& 8 mins 32 sec&23 lines &1 min 26 sec\\ \hline
+    Door Lock System& 8& 4& 3& 1& 16& 14 mins 12 sec&27 lines& 4 mins 38 sec \\ \hline
+    Weighting System& 9& 3& 1& 1& 17&13 mins 45 sec&30 lines& 2 mins 9 sec\\ \hline
+\end{tabular} 
+\end{center}
+\caption{Experimental Data to Model Smart Home Systems}
+\label{t4}
+\end{table}
+
+
+ 
+Overall, the times taken to model the smart home systems are relatively similar. However, usability was negatively affected by the installation time for the software, due to the need for several Eclipse plugins. This weakness can be addressed through the development of an integrated installer for the tool in the future.
+The time taken for updating every smart home app was remarkably small, which is attributed to the similarity of activity diagrams to flowcharts. 
+
+However, compilation times for each of the study as shown in \ref{t4} are relatively high. The Smart Security System, which has the smallest size, takes the shortest time to compile. The long compile times come from the manual effort that the tool currently requires in the intermediate stages of the code generation process. For instance, intermediate files generated after a model transformation have to be manually pasted into a different folder for the next phase. These are purely mechanical steps that can be automated easily in the future, and we are already working on these. 
+
+
+
+
+
